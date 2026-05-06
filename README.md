@@ -1,4 +1,4 @@
-README - Rupestre Tracto-Autopartes
+Rupestre Tracto-Autopartes
 
 Descripción
 Sitio web moderno y responsivo para Rupestre Tracto-Autopartes, enfocado en la venta y cotización de refacciones para autos, camiones y maquinaria pesada.
