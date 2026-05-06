@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupestre Tracto-Autopartes | Refacciones para Autos y Camiones</title>
+    <meta name="description" content="Tu proveedor de confianza en tracto-autopartes. Piezas originales y alternativas para camiones de carga y maquinaria pesada. Más de 35 años de experiencia.">
+    <meta name="keywords" content="tracto-autopartes, refacciones camiones, autopartes pesadas, motores diésel, frenos camión, suspension camion, Rupestre">
+    <meta name="author" content="Rupestre Tracto-Autopartes">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rupestre Tracto-Autopartes | Refacciones para Autos y Camiones">
+    <meta property="og:description" content="Tu proveedor de confianza en tracto-autopartes. Piezas originales y alternativas para camiones de carga y maquinaria pesada.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&h=630&fit=crop&q=80">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛻</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { rupestre: { red: '#DC2626', orange: '#F97316', darkred: '#991B1B' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --brand-red: #DC2626; --brand-orange: #F97316; --x: 50%; --y: 50%; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #DC2626; }
+        .brand-name { font-weight: 900; letter-spacing: -0.03em; line-height: 1; background: linear-gradient(135deg, #DC2626 0%, #F97316 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .brand-sub { font-weight: 500; letter-spacing: 0.25em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+        .brand-hero .brand-name { font-size: clamp(3rem, 8vw, 7rem); filter: drop-shadow(0 0 40px rgba(220,38,38,0.3)); }
+        .brand-hero .brand-sub { font-size: clamp(0.65rem, 1.5vw, 0.9rem); }
+        .brand-nav .brand-name { font-size: 1.1rem; }
+        .brand-nav .brand-sub { font-size: 0.5rem; }
+        .brand-mobile .brand-name { font-size: 2rem; }
+        .brand-mobile .brand-sub { font-size: 0.65rem; }
+        .brand-footer .brand-name { font-size: 1.4rem; }
+        .brand-footer .brand-sub { font-size: 0.55rem; }
+        .brand-cta .brand-name { font-size: 1.6rem; }
+        @keyframes immersiveEnter { from { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(10px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+        .animate-enter { opacity: 0; animation: immersiveEnter 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .delay-100 { animation-delay: 150ms; } .delay-200 { animation-delay: 300ms; } .delay-300 { animation-delay: 450ms; } .delay-500 { animation-delay: 750ms; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(220,38,38,0.25); } 50% { box-shadow: 0 0 40px rgba(220,38,38,0.45); } }
+        .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        .hero-spotlight { background: radial-gradient(800px circle at var(--x) var(--y), rgba(220,38,38,0.06), transparent 40%); }
+        .grid-bg { background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 4rem 4rem; }
+        .text-gradient { background: linear-gradient(to bottom, #ffffff, rgba(255,255,255,0.6)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 0 40px -10px rgba(220,38,38,0.2); border-color: rgba(220,38,38,0.3); }
+        .btn-primary { background: linear-gradient(135deg, #DC2626, #B91C1C); color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #EF4444, #F97316); opacity: 0; transition: opacity 0.3s ease; }
+        .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover { box-shadow: 0 0 40px -10px rgba(220,38,38,0.6); transform: translateY(-2px); }
+        .btn-primary span, .btn-primary .iconify { position: relative; z-index: 1; }
+        .btn-outline { border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: 600; transition: all 0.3s ease; }
+        .btn-outline:hover { border-color: #DC2626; color: #DC2626; background: rgba(220,38,38,0.05); }
+        .nav-blur { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; transition: all 0.3s ease; }
+        .form-input:focus { outline: none; border-color: #DC2626; box-shadow: 0 0 0 3px rgba(220,38,38,0.15); background: rgba(255,255,255,0.08); }
+        .form-input::placeholder { color: #737373; }
+        .toast { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; padding: 1rem 1.5rem; border-radius: 1rem; background: #171717; border: 1px solid rgba(220,38,38,0.3); color: #fff; font-size: 0.875rem; transform: translateY(120%); opacity: 0; transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .marquee-track { display: flex; gap: 3rem; animation: marquee 30s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .brand-icon-bg { background: linear-gradient(135deg, rgba(220,38,38,0.15), rgba(249,115,22,0.08)); border: 1px solid rgba(220,38,38,0.2); }
+        .divider-brand { height: 2px; background: linear-gradient(90deg, transparent, rgba(220,38,38,0.3), rgba(249,115,22,0.3), transparent); }
+        .radio-dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #525252; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; flex-shrink: 0; }
+        .radio-dot.active { border-color: #DC2626; background: rgba(220,38,38,0.15); }
+        .radio-dot .inner { width: 8px; height: 8px; border-radius: 50%; background: #DC2626; transform: scale(0); transition: transform 0.2s ease; }
+        .radio-dot.active .inner { transform: scale(1); }
+        .nav-brand-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, rgba(220,38,38,0.15), rgba(249,115,22,0.1)); border: 1px solid rgba(220,38,38,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .hero-line { width: 80px; height: 3px; background: linear-gradient(90deg, #DC2626, #F97316); border-radius: 2px; }
+        @keyframes wa-bounce-in { 0% { transform: scale(0.5) translateY(20px); opacity: 0; } 50% { transform: scale(1.05) translateY(-5px); } 100% { transform: scale(1) translateY(0); opacity: 1; } }
+        @keyframes wa-bounce-out { 0% { transform: scale(1) translateY(0); opacity: 1; } 100% { transform: scale(0.5) translateY(20px); opacity: 0; } }
+        @keyframes wa-pulse-ring { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
+        @keyframes wa-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+        @keyframes wa-typing { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
+        .wa-btn { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 1000; width: 60px; height: 60px; border-radius: 50%; background: #25D366; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; animation: wa-float 3s ease-in-out infinite; }
+        .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .wa-btn:active { transform: scale(0.95); }
+        .wa-btn .wa-ring { position: absolute; inset: -4px; border: 2px solid #25D366; border-radius: 50%; animation: wa-pulse-ring 2s ease-out infinite; }
+        .wa-btn.chat-open { animation: none; }
+        .wa-btn.chat-open:hover { transform: rotate(90deg) scale(1.1); }
+        .wa-chat { position: fixed; bottom: 6rem; right: 1.5rem; z-index: 999; width: 340px; max-width: calc(100vw - 2rem); border-radius: 1.25rem; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(37,211,102,0.08); transform: scale(0.5) translateY(20px); opacity: 0; pointer-events: none; }
+        .wa-chat.open { animation: wa-bounce-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; pointer-events: auto; }
+        .wa-chat.closing { animation: wa-bounce-out 0.25s ease-in forwards; pointer-events: none; }
+        .wa-header { background: linear-gradient(135deg, #075E54, #128C7E); padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+        .wa-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #DC2626, #F97316); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 900; font-size: 0.7rem; color: #fff; letter-spacing: 0.05em; }
+        .wa-body { padding: 1.25rem; min-height: 120px; }
+        .wa-msg { background: #1a1a1a; border-radius: 0 0.75rem 0.75rem 0.75rem; padding: 0.75rem 1rem; font-size: 0.8rem; color: #e5e5e5; line-height: 1.5; position: relative; border: 1px solid rgba(255,255,255,0.05); }
+        .wa-msg::before { content: ''; position: absolute; top: 0; left: -6px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 8px solid #1a1a1a; }
+        .wa-msg-time { font-size: 0.65rem; color: #525252; text-align: right; margin-top: 0.4rem; }
+        .wa-typing { display: flex; gap: 4px; padding: 0.5rem 0 0; }
+        .wa-typing span { width: 6px; height: 6px; border-radius: 50%; background: #525252; }
+        .wa-typing span:nth-child(1) { animation: wa-typing 1.4s infinite 0s; }
+        .wa-typing span:nth-child(2) { animation: wa-typing 1.4s infinite 0.2s; }
+        .wa-typing span:nth-child(3) { animation: wa-typing 1.4s infinite 0.4s; }
+        .wa-footer { padding: 0.75rem 1.25rem 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        .wa-send-btn { width: 100%; padding: 0.75rem; border-radius: 0.75rem; border: none; background: #25D366; color: #fff; font-weight: 600; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.2s ease; }
+        .wa-send-btn:hover { background: #22C55E; transform: translateY(-1px); }
+        .wa-notif { position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 50%; background: #DC2626; color: #fff; font-size: 0.6rem; font-weight: 700; display: none; align-items: center; justify-content: center; border: 2px solid #0a0a0a; }
+        .wa-notif.show { display: flex; animation: wa-pulse-ring 2s ease-out infinite; }
+        .modal-overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .modal-overlay.open { opacity: 1; pointer-events: auto; }
+        .modal-content { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; width: 100%; max-width: 720px; max-height: 85vh; overflow: hidden; transform: scale(0.95) translateY(20px); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); box-shadow: 0 25px 60px rgba(0,0,0,0.5); }
+        .modal-overlay.open .modal-content { transform: scale(1) translateY(0); }
+        .modal-scroll { overflow-y: auto; max-height: calc(85vh - 80px); padding: 2rem; }
+        .modal-scroll::-webkit-scrollbar { width: 4px; }
+        .modal-scroll::-webkit-scrollbar-track { background: transparent; }
+        .modal-scroll::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+        .privacy-section { margin-bottom: 1.5rem; }
+        .privacy-section:last-child { margin-bottom: 0; }
+        .privacy-title { font-size: 0.85rem; font-weight: 700; color: #DC2626; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .privacy-text { font-size: 0.82rem; color: #a3a3a3; line-height: 1.7; }
+        .privacy-text strong { color: #e5e5e5; font-weight: 600; }
+        .privacy-list { list-style: none; padding: 0; }
+        .privacy-list li { font-size: 0.82rem; color: #a3a3a3; line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.25rem; }
+        .privacy-list li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, #DC2626, #F97316); }
+        .custom-check { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; }
+        .custom-check input { display: none; }
+        .custom-check .checkmark { width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0; border: 2px solid #525252; background: transparent; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; margin-top: 1px; }
+        .custom-check input:checked + .checkmark { background: #DC2626; border-color: #DC2626; }
+        .custom-check input:checked + .checkmark .iconify { display: block; }
+        .custom-check .checkmark .iconify { display: none; color: #fff; font-size: 12px; }
+        .custom-check .check-label { font-size: 0.78rem; color: #737373; line-height: 1.5; }
+        .custom-check .check-label a { color: #DC2626; text-decoration: underline; text-underline-offset: 2px; }
+        .custom-check .check-label a:hover { color: #EF4444; }
+        .custom-check.error .checkmark { border-color: #DC2626; animation: shake 0.3s ease; }
+        @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+        .svc-img-wrap { position: relative; overflow: hidden; }
+        .svc-img-wrap img { width: 100%; height: 100%; object-cover: opacity: 0.55; transition: all 0.7s ease; filter: brightness(0.8); }
+        .svc-img-wrap:hover img { opacity: 0.8; transform: scale(1.05); filter: brightness(1); }
+        .svc-img-wrap .svc-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,0.3) 50%, transparent 100%); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-20 flex items-center px-6 md:px-12 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+            <a href="#" class="brand-nav flex items-center gap-3 group">
+                <div class="nav-brand-icon group-hover:border-rupestre-red/40 transition-all duration-300"><span class="iconify text-rupestre-red text-lg" data-icon="mdi:truck-cog-container"></span></div>
+                <div class="flex flex-col leading-none"><span class="brand-name">RUPESTRE</span><span class="brand-sub">Tracto-Autopartes</span></div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-sm font-medium text-neutral-400 hover:text-rupestre-red transition-colors duration-300">Inicio</a>
+                <a href="#nosotros" class="text-sm font-medium text-neutral-400 hover:text-rupestre-red transition-colors duration-300">Nosotros</a>
+                <a href="#servicios" class="text-sm font-medium text-neutral-400 hover:text-rupestre-red transition-colors duration-300">Servicios</a>
+                <a href="#valores" class="text-sm font-medium text-neutral-400 hover:text-rupestre-red transition-colors duration-300">Valores</a>
+                <a href="#cotizar" class="btn-primary px-5 py-2.5 rounded-xl text-xs"><span>Cotizar Ahora</span></a>
+            </div>
+            <button id="menuBtn" class="md:hidden w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center hover:border-rupestre-red/30 transition-all"><span class="iconify text-white text-xl" data-icon="mdi:menu" id="menuIcon"></span></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="brand-mobile flex flex-col items-center leading-none mb-4"><span class="brand-name">RUPESTRE</span><span class="brand-sub mt-1">Tracto-Autopartes</span></div>
+        <a href="#inicio" class="text-2xl font-semibold text-white hover:text-rupestre-red transition-colors mobile-link">Inicio</a>
+        <a href="#nosotros" class="text-2xl font-semibold text-white hover:text-rupestre-red transition-colors mobile-link">Nosotros</a>
+        <a href="#servicios" class="text-2xl font-semibold text-white hover:text-rupestre-red transition-colors mobile-link">Servicios</a>
+        <a href="#valores" class="text-2xl font-semibold text-white hover:text-rupestre-red transition-colors mobile-link">Valores</a>
+        <a href="#cotizar" class="btn-primary px-8 py-4 rounded-xl text-sm mt-4 mobile-link"><span>Cotizar Ahora</span></a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&h=1080&fit=crop&q=80" alt="Motor diésel de camión pesado - Rupestre Tracto-Autopartes" loading="eager">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
+        </div>
+        <div class="absolute inset-0 hero-spotlight pointer-events-none"></div>
+        <div class="absolute inset-0 grid-bg opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-[600px] h-[400px] bg-rupestre-red/[0.04] rounded-full blur-[150px] pointer-events-none"></div>
+        <div class="absolute top-1/4 right-1/4 w-[400px] h-[300px] bg-rupestre-orange/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-6 pt-20">
+            <div class="animate-enter brand-hero flex flex-col items-center leading-none mb-4"><span class="brand-name">RUPESTRE</span><div class="hero-line my-4"></div><span class="brand-sub">Tracto-Autopartes</span></div>
+            <div class="animate-enter delay-100 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rupestre-red/20 bg-rupestre-red/5 backdrop-blur-sm mb-6 mt-6"><span class="w-2 h-2 rounded-full bg-rupestre-red animate-pulse"></span><span class="text-xs font-medium tracking-widest uppercase text-rupestre-red">Refacciones para Autos y Camiones</span></div>
+            <p class="animate-enter delay-200 text-lg md:text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-4 leading-relaxed">Tu proveedor de confianza en <strong class="text-white font-medium">tracto-autopartes</strong>. Piezas originales y alternativas para camiones de carga y maquinaria pesada.</p>
+            <p class="animate-enter delay-200 text-sm text-neutral-500 mb-10 flex items-center justify-center gap-2 flex-wrap"><span class="iconify text-rupestre-orange" data-icon="mdi:map-marker"></span> Visítanos en nuestra sucursal física<span class="text-neutral-700 mx-1">|</span><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp"></span> Atendemos por WhatsApp</p>
+            <div class="animate-enter delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#cotizar" class="btn-primary px-8 py-4 rounded-2xl text-sm flex items-center gap-2 pulse-glow"><span class="iconify text-lg" data-icon="mdi:file-document-edit-outline"></span><span>Solicitar Cotización</span></a>
+                <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-2xl text-sm flex items-center gap-2"><span class="iconify text-lg" data-icon="mdi:facebook"></span>Ver Facebook</a>
+            </div>
+            <div class="animate-enter delay-500 mt-16 float-anim"><span class="iconify text-2xl text-neutral-600" data-icon="mdi:chevron-double-down"></span></div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="relative py-6 border-y border-white/5 overflow-hidden bg-neutral-950/50">
+        <div class="marquee-track">
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Motores Diésel</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Transmisiones</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Frenos y Suspensión</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Sistema Eléctrico</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Filtración</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Rodamientos y Sellos</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Carrocería</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Aceites y Lubricantes</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Motores Diésel</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Transmisiones</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Frenos y Suspensión</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Sistema Eléctrico</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Filtración</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Rodamientos y Sellos</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-red/50"></span> Carrocería</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-neutral-600 whitespace-nowrap flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-rupestre-orange/50"></span> Aceites y Lubricantes</span>
+        </div>
+    </div>
+
+    <!-- ===== STATS ===== -->
+    <section class="py-16 md:py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div class="text-center p-6 rounded-2xl border border-white/5 bg-neutral-950/50 card-hover"><div class="text-3xl md:text-4xl font-extrabold text-rupestre-red mb-1">35+</div><div class="text-xs font-medium tracking-wider uppercase text-neutral-500">Años de Experiencia</div></div>
+            <div class="text-center p-6 rounded-2xl border border-white/5 bg-neutral-950/50 card-hover"><div class="text-3xl md:text-4xl font-extrabold text-rupestre-orange mb-1">5K+</div><div class="text-xs font-medium tracking-wider uppercase text-neutral-500">Clientes Atendidos</div></div>
+            <div class="text-center p-6 rounded-2xl border border-white/5 bg-neutral-950/50 card-hover"><div class="text-3xl md:text-4xl font-extrabold text-rupestre-red mb-1">10K+</div><div class="text-xs font-medium tracking-wider uppercase text-neutral-500">Refacciones en Stock</div></div>
+            <div class="text-center p-6 rounded-2xl border border-white/5 bg-neutral-950/50 card-hover"><div class="text-3xl md:text-4xl font-extrabold text-rupestre-orange mb-1">30min</div><div class="text-xs font-medium tracking-wider uppercase text-neutral-500">Respuesta Rápida</div></div>
+        </div>
+    </section>
+
+    <!-- ===== MISIÓN & VISIÓN ===== -->
+    <section id="nosotros" class="relative py-20 md:py-32 px-6 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-rupestre-red/[0.02] blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[300px] bg-rupestre-orange/[0.02] rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6"><span class="iconify text-rupestre-red text-sm" data-icon="mdi:information-outline"></span><span class="text-xs font-medium tracking-widest uppercase text-neutral-400">Quiénes Somos</span></div>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-gradient mb-4">Misión & Visión</h2>
+                <p class="text-neutral-500 text-base md:text-lg max-w-xl mx-auto">Comprometidos con mantener su maquinaria en óptimas condiciones</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="group relative p-8 md:p-10 rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl card-hover overflow-hidden"><div class="absolute top-0 right-0 w-40 h-40 bg-rupestre-red/[0.04] rounded-full blur-[80px] group-hover:bg-rupestre-red/[0.08] transition-all duration-700"></div><div class="relative"><div class="w-14 h-14 rounded-2xl brand-icon-bg flex items-center justify-center mb-6"><span class="iconify text-rupestre-red text-2xl" data-icon="mdi:target"></span></div><h3 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">Nuestra Misión</h3><p class="text-neutral-400 leading-relaxed text-base">Proveer tracto-autopartes de <strong class="text-white">alta calidad</strong> a precios competitivos, garantizando disponibilidad inmediata y asesoría técnica especializada para cada cliente. Nos dedicamos a ser el enlace confiable entre las mejores marcas del mercado y quienes mantienen en movimiento la industria del transporte y la maquinaria pesada.</p></div></div>
+                <div class="group relative p-8 md:p-10 rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl card-hover overflow-hidden"><div class="absolute top-0 right-0 w-40 h-40 bg-rupestre-orange/[0.04] rounded-full blur-[80px] group-hover:bg-rupestre-orange/[0.08] transition-all duration-700"></div><div class="relative"><div class="w-14 h-14 rounded-2xl brand-icon-bg flex items-center justify-center mb-6"><span class="iconify text-rupestre-orange text-2xl" data-icon="mdi:eye-outline"></span></div><h3 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">Nuestra Visión</h3><p class="text-neutral-400 leading-relaxed text-base">Ser el <strong class="text-white">referente número uno</strong> en distribución de tracto-autopartes en la región, reconocidos por nuestra amplitud de inventario, rapidez de servicio y compromiso genuino con el éxito de nuestros clientes. Aspiramos a expandir nuestra presencia digital y física para llegar a más operadores del sector.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALORES ===== -->
+    <section id="valores" class="relative py-20 md:py-32 px-6 bg-neutral-950/50">
+        <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6"><span class="iconify text-rupestre-orange text-sm" data-icon="mdi:diamond-stone"></span><span class="text-xs font-medium tracking-widest uppercase text-neutral-400">Principios</span></div>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-gradient mb-4">Nuestros Valores</h2>
+                <p class="text-neutral-500 text-base md:text-lg max-w-xl mx-auto">Los pilares que guían cada una de nuestras acciones</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-red text-xl" data-icon="mdi:handshake-outline"></span></div><h3 class="text-lg font-semibold text-white mb-2">Honestidad</h3><p class="text-sm text-neutral-500 leading-relaxed">Transparencia total en precios, disponibilidad y calidad de cada pieza.</p></div>
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-orange text-xl" data-icon="mdi:shield-check-outline"></span></div><h3 class="text-lg font-semibold text-white mb-2">Calidad Garantizada</h3><p class="text-sm text-neutral-500 leading-relaxed">Trabajamos únicamente con marcas reconocidas y respaldamos cada producto.</p></div>
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-red text-xl" data-icon="mdi:clock-fast"></span></div><h3 class="text-lg font-semibold text-white mb-2">Rapidez</h3><p class="text-sm text-neutral-500 leading-relaxed">Sabemos que cada hora de paro cuesta dinero. Respuesta ágil y surtido inmediato.</p></div>
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-orange text-xl" data-icon="mdi:account-group-outline"></span></div><h3 class="text-lg font-semibold text-white mb-2">Compromiso</h3><p class="text-sm text-neutral-500 leading-relaxed">Nos involucramos con las necesidades de cada cliente como si fueran propias.</p></div>
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-red text-xl" data-icon="mdi:wrench-cog-outline"></span></div><h3 class="text-lg font-semibold text-white mb-2">Asesoría Técnica</h3><p class="text-sm text-neutral-500 leading-relaxed">No solo vendemos piezas, te orientamos para que elijas la correcta para tu equipo.</p></div>
+                <div class="group p-6 rounded-2xl border border-white/5 bg-neutral-900/30 card-hover"><div class="w-12 h-12 rounded-xl brand-icon-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"><span class="iconify text-rupestre-orange text-xl" data-icon="mdi:heart-outline"></span></div><h3 class="text-lg font-semibold text-white mb-2">Servicio Humano</h3><p class="text-sm text-neutral-500 leading-relaxed">Trato cercano, respetuoso y personalizado. Cada cliente es parte de nuestra familia.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section id="servicios" class="relative py-20 md:py-32 px-6 overflow-hidden">
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-rupestre-red/[0.02] rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-rupestre-orange/[0.015] rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6"><span class="iconify text-rupestre-red text-sm" data-icon="mdi:cog-outline"></span><span class="text-xs font-medium tracking-widest uppercase text-neutral-400">Catálogo</span></div>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-gradient mb-4">Lo Que Ofrecemos</h2>
+                <p class="text-neutral-500 text-base md:text-lg max-w-xl mx-auto">Todo lo que tu camión o maquinaria necesita en un solo lugar</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=400&fit=crop&q=80" alt="Motor diésel de camión pesado" loading="lazy"><div class="svc-overlay"></div><div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-rupestre-red/20 border border-rupestre-red/30 backdrop-blur-sm"><span class="text-[10px] font-bold tracking-wider uppercase text-rupestre-red">Popular</span></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-red" data-icon="mdi:engine-outline"></span><h3 class="text-lg font-semibold text-white">Motores Diésel</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Pistones, anillos, cilindros, cabezas, juntas, turboalimentadores y más.</p></div></div>
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&h=400&fit=crop&q=80" alt="Sistema de frenos de camión" loading="lazy"><div class="svc-overlay"></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-orange" data-icon="mdi:car-brake-alert"></span><h3 class="text-lg font-semibold text-white">Frenos & Suspensión</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Balatas, discos, tambores, cámaras de freno, resortes y amortiguadores.</p></div></div>
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&h=400&fit=crop&q=80" alt="Componentes eléctricos" loading="lazy"><div class="svc-overlay"></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-red" data-icon="mdi:flash-outline"></span><h3 class="text-lg font-semibold text-white">Sistema Eléctrico</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Alternadores, arrancadores, baterías, sensores y componentes electrónicos.</p></div></div>
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" alt="Filtros y aceites" loading="lazy"><div class="svc-overlay"></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-orange" data-icon="mdi:filter-outline"></span><h3 class="text-lg font-semibold text-white">Filtración & Lubricantes</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Filtros de aire, aceite, diesel e hidráulico. Aceites de toda línea.</p></div></div>
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=400&fit=crop&q=80" alt="Engranajes de transmisión" loading="lazy"><div class="svc-overlay"></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-red" data-icon="mdi:gearbox"></span><h3 class="text-lg font-semibold text-white">Transmisiones</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Embragues, cajas de velocidades, flechas, crucetas y diferenciales.</p></div></div>
+                <div class="group relative rounded-2xl border border-white/5 bg-neutral-900/30 overflow-hidden card-hover"><div class="svc-img-wrap h-52"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=600&h=400&fit=crop&q=80" alt="Cabina de camión" loading="lazy"><div class="svc-overlay"></div></div><div class="p-6"><div class="flex items-center gap-2 mb-3"><span class="iconify text-rupestre-orange" data-icon="mdi:truck-outline"></span><h3 class="text-lg font-semibold text-white">Carrocería & Cabina</h3></div><p class="text-sm text-neutral-500 leading-relaxed">Faros, espejos, defensas, lengüetas, quijadas y paneles de cabina.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COTIZACIÓN ===== -->
+    <section id="cotizar" class="relative py-20 md:py-32 px-6 bg-neutral-950/80 overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-rupestre-red/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="relative max-w-4xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rupestre-red/20 bg-rupestre-red/5 backdrop-blur-sm mb-6"><span class="iconify text-rupestre-red text-sm" data-icon="mdi:file-document-edit-outline"></span><span class="text-xs font-medium tracking-widest uppercase text-rupestre-red">Formulario</span></div>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tighter text-gradient mb-4">Solicita tu Cotización</h2>
+                <p class="text-neutral-500 text-base md:text-lg max-w-xl mx-auto">Cuéntanos qué necesitas y te respondemos lo antes posible.</p>
+            </div>
+            <form id="cotizacionForm" class="relative rounded-3xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl p-8 md:p-12" novalidate>
+                <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-rupestre-red/20 rounded-tl-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-rupestre-orange/20 rounded-br-3xl pointer-events-none"></div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Nombre Completo *</label><input type="text" name="nombre" required placeholder="Ej: Juan Pérez" class="form-input w-full px-4 py-3.5 rounded-xl text-sm"></div>
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Teléfono / WhatsApp *</label><input type="tel" name="telefono" required placeholder="Ej: 6643983448" class="form-input w-full px-4 py-3.5 rounded-xl text-sm"></div>
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Correo Electrónico</label><input type="email" name="email" placeholder="Ej: correo@ejemplo.com" class="form-input w-full px-4 py-3.5 rounded-xl text-sm"></div>
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Ciudad / Estado</label><input type="text" name="ciudad" placeholder="Ej: Veracruz, Ver." class="form-input w-full px-4 py-3.5 rounded-xl text-sm"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Tipo de Vehículo *</label><select name="tipo_vehiculo" required class="form-input w-full px-4 py-3.5 rounded-xl text-sm appearance-none cursor-pointer"><option value="" disabled selected>Selecciona una opción</option><option value="Camión de Carga" class="bg-neutral-900">Camión de Carga</option><option value="Camión de 3 Ejes" class="bg-neutral-900">Camión de 3 Ejes</option><option value="Tráiler / Remolque" class="bg-neutral-900">Tráiler / Remolque</option><option value="Maquinaria Pesada" class="bg-neutral-900">Maquinaria Pesada</option><option value="Tractor Agrícola" class="bg-neutral-900">Tractor Agrícola</option><option value="Pickup / Van de Carga" class="bg-neutral-900">Pickup / Van de Carga</option><option value="Otro" class="bg-neutral-900">Otro</option></select></div>
+                    <div><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Marca / Modelo</label><input type="text" name="marca" placeholder="Ej: Freightliner Cascadia 2019" class="form-input w-full px-4 py-3.5 rounded-xl text-sm"></div>
+                </div>
+                <div class="mb-6"><label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-2">Descripción de las Piezas Necesarias *</label><textarea name="descripcion" required rows="5" placeholder="Describe las piezas que necesitas. Incluye números de parte si los tienes, cantidades, y cualquier detalle." class="form-input w-full px-4 py-3.5 rounded-xl text-sm resize-none"></textarea></div>
+                <div class="mb-6">
+                    <label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-3">¿Cómo prefieres que te contactemos?</label>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'whatsapp')"><div class="radio-dot active"><div class="inner" style="transform:scale(1)"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-green-500" data-icon="mdi:whatsapp"></span> WhatsApp</span></label>
+                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'facebook')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-[#1877F2]" data-icon="mdi:facebook"></span> Facebook</span></label>
+                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'email')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-rupestre-orange" data-icon="mdi:email-outline"></span> Email</span></label>
+                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'llamada')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-rupestre-red" data-icon="mdi:phone-outline"></span> Llamada</span></label>
+                    </div>
+                    <input type="hidden" name="contacto" id="contactoHidden" value="whatsapp">
+                </div>
+                <div class="mb-6"><label class="custom-check" id="privacyCheck"><input type="checkbox" id="privacyCheckbox"><div class="checkmark"><span class="iconify" data-icon="mdi:check"></span></div><span class="check-label">He leído y acepto el <a href="#" onclick="openPrivacyModal(event)">Aviso de Privacidad y Tratamiento de Datos Personales</a>. Autorizo el uso de mis datos para ser contactado con fines de cotización.</span></label></div>
+                <button type="submit" id="submitBtn" class="btn-primary w-full py-4 rounded-2xl text-sm flex items-center justify-center gap-2"><span class="iconify text-lg" data-icon="mdi:send"></span><span id="submitText">Enviar Solicitud de Cotización</span></button>
+            </form>
+        </div>
+    </section>
+
+    <div class="divider-brand"></div>
+
+    <!-- ===== FACEBOOK CTA ===== -->
+    <section class="py-20 md:py-28 px-6 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/[0.03] rounded-full blur-[120px]"></div>
+        <div class="relative max-w-3xl mx-auto text-center">
+            <div class="brand-cta inline-flex flex-col items-center leading-none mb-8 opacity-70"><span class="brand-name">RUPESTRE</span><span class="brand-sub mt-1">Tracto-Autopartes</span></div>
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">Síguenos en Facebook</h2>
+            <p class="text-neutral-400 text-base md:text-lg mb-8 leading-relaxed">En nuestra página subimos nuevas piezas, ofertas especiales y atendemos dudas al instante. ¡Da like y forma parte de la comunidad Rupestre!</p>
+            <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(24,119,242,0.5)] hover:-translate-y-0.5"><span class="iconify text-xl" data-icon="mdi:facebook"></span> Visitar @AutopartesRupestre</a>
+        </div>
+    </section>
+
+    <div class="divider-brand"></div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-neutral-950/80">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-3 gap-12 md:gap-8">
+                <div>
+                    <a href="#" class="brand-footer flex items-center gap-3 mb-4"><div class="nav-brand-icon"><span class="iconify text-rupestre-red text-lg" data-icon="mdi:truck-cog-container"></span></div><div class="flex flex-col leading-none"><span class="brand-name">RUPESTRE</span><span class="brand-sub">Tracto-Autopartes</span></div></a>
+                    <p class="text-sm text-neutral-500 leading-relaxed mb-6">Tu proveedor de confianza en tracto-autopartes para camiones de carga y maquinaria pesada.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-400 hover:text-[#1877F2] transition-colors"><span class="iconify text-lg inline" data-icon="mdi:facebook"></span> Facebook</a>
+                        <span class="text-neutral-700">|</span>
+                        <a href="https://wa.me/526643983448" target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-400 hover:text-[#25D366] transition-colors"><span class="iconify text-lg inline" data-icon="mdi:whatsapp"></span> WhatsApp</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-6">Navegación</h4>
+                    <ul class="space-y-3"><li><a href="#inicio" class="text-sm text-neutral-500 hover:text-rupestre-red transition-colors">Inicio</a></li><li><a href="#nosotros" class="text-sm text-neutral-500 hover:text-rupestre-red transition-colors">Misión & Visión</a></li><li><a href="#valores" class="text-sm text-neutral-500 hover:text-rupestre-red transition-colors">Nuestros Valores</a></li><li><a href="#servicios" class="text-sm text-neutral-500 hover:text-rupestre-red transition-colors">Servicios</a></li><li><a href="#cotizar" class="text-sm text-neutral-500 hover:text-rupestre-red transition-colors">Cotización</a></li></ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-6">Horario de Atención</h4>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between text-sm"><span class="text-neutral-500">Lunes - Viernes</span><span class="text-white font-medium">7:00 AM - 7:00 PM</span></li>
+                        <li class="flex justify-between text-sm"><span class="text-neutral-500">Sábado</span><span class="text-white font-medium">7:00 AM - 6:00 PM</span></li>
+                        <li class="flex justify-between text-sm"><span class="text-neutral-500">Domingo</span><span class="text-white font-medium">9:00 AM - 3:00 PM</span></li>
+                    </ul>
+                    <div class="mt-6 p-4 rounded-xl border border-[#25D366]/10 bg-[#25D366]/[0.03]"><p class="text-xs text-neutral-400 flex items-center gap-2"><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp"></span> WhatsApp disponible fuera de horario</p></div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-neutral-600">© 2025 Rupestre Tracto-Autopartes. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-4">
+                    <span class="cursor-pointer text-xs text-neutral-600 hover:text-neutral-400 transition-colors" onclick="openPrivacyModal(event)">Aviso de Privacidad</span>
+                    <span class="text-neutral-800">|</span>
+                    <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rupestre-red/60"></span><span class="w-2 h-2 rounded-full bg-rupestre-orange/60"></span><span class="text-xs text-neutral-700">Refacciones para Autos y Camiones</span></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL AVISO DE PRIVACIDAD ===== -->
+    <div id="privacyModal" class="modal-overlay" onclick="closePrivacyModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-6 pb-0">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2"><span class="iconify text-rupestre-red" data-icon="mdi:shield-lock-outline"></span> Aviso de Privacidad</h3>
+                <button onclick="closePrivacyModal()" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"><span class="iconify text-neutral-400" data-icon="mdi:close"></span></button>
+            </div>
+            <div class="modal-scroll">
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:domain"></span> Responsable del Tratamiento</div>
+                    <p class="privacy-text"><strong>Rupestre Tracto-Autopartes</strong>, con domicilio en México, es responsable del tratamiento de sus datos personales, los cuales serán protegidos conforme a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).</p>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:database-outline"></span> Datos que se Recopilan</div>
+                    <ul class="privacy-list">
+                        <li>Nombre completo</li>
+                        <li>Número de teléfono / WhatsApp</li>
+                        <li>Correo electrónico (opcional)</li>
+                        <li>Ciudad y estado (opcional)</li>
+                        <li>Tipo de vehículo, marca y modelo</li>
+                        <li>Descripción de las refacciones solicitadas</li>
+                        <li>Preferencia de contacto</li>
+                    </ul>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:target"></span> Finalidad del Tratamiento</div>
+                    <ul class="privacy-list">
+                        <li>Procesar y dar seguimiento a solicitudes de cotización</li>
+                        <li>Contactar al usuario para ofrecer productos y servicios relacionados</li>
+                        <li>Mejorar nuestros servicios y experiencia de usuario</li>
+                        <li>Enviar información promocional (solo con autorización expresa)</li>
+                    </ul>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:share-variant-outline"></span> Transferencia de Datos</div>
+                    <p class="privacy-text">Sus datos personales <strong>no serán compartidos con terceros</strong> ajenos a Rupestre Tracto-Autopartes, salvo cuando sea necesario para cumplir con la finalidad del tratamiento o cuando exista obligación legal.</p>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:clock-outline"></span> Conservación de Datos</div>
+                    <p class="privacy-text">Los datos personales se conservarán durante el tiempo necesario para cumplir con la finalidad para la que fueron recopilados, y posteriormente se eliminarán de conformidad con los plazos establecidos en la LFPDPPP.</p>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:account-rights-outline"></span> Derechos ARCO</div>
+                    <p class="privacy-text">Usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> (derechos ARCO) al tratamiento de sus datos personales. Para ejercer estos derechos, puede enviar un correo a nuestra sucursal física o contactarnos por WhatsApp.</p>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:lock-outline"></span> Seguridad</div>
+                    <p class="privacy-text">Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos personales contra daño, pérdida, alteración, destrucción, uso, acceso o tratamiento no autorizado.</p>
+                </div>
+                <div class="privacy-section">
+                    <div class="privacy-title"><span class="iconify" data-icon="mdi:update"></span> Cambios al Aviso</div>
+                    <p class="privacy-text">Nos reservamos el derecho de modificar el presente aviso de privacidad. Cualquier cambio será publicado en esta misma página web. Le recomendamos revisarlo periódicamente.</p>
+                </div>
+                <p class="privacy-text text-neutral-600 text-xs mt-4">Última actualización: Enero 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP WIDGET ===== -->
+    <div id="waChat" class="wa-chat">
+        <div class="wa-header"><div class="wa-avatar">RU</div><div class="flex-1 min-w-0"><div class="text-white font-semibold text-sm">Rupestre Tracto-Autopartes</div><div class="text-green-200/70 text-xs flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-300 inline-block"></span> En línea</div></div><button onclick="toggleWhatsApp()" class="text-white/60 hover:text-white transition-colors p-1"><span class="iconify text-lg" data-icon="mdi:close"></span></button></div>
+        <div class="wa-body"><div class="wa-msg" id="waTyping"><div class="wa-typing"><span></span><span></span><span></span></div></div><div class="wa-msg hidden" id="waMessage" style="margin-top:0;"><p>¡Hola! 👋 Bienvenido a <strong>Rupestre Tracto-Autopartes</strong>.</p><p class="mt-2">¿En qué podemos ayudarte? Cuéntanos qué tracto-autoparte necesitas y te cotizamos de inmediato.</p><div class="wa-msg-time">Ahora</div></div></div>
+        <div class="wa-footer"><button class="wa-send-btn" onclick="openWhatsApp()"><span class="iconify text-lg" data-icon="mdi:whatsapp"></span> Abrir WhatsApp</button><p class="text-center text-[10px] text-neutral-600 mt-2">Enlace directo a WhatsApp</p></div>
+    </div>
+    <div id="waBtn" class="wa-btn" onclick="toggleWhatsApp()" title="Escríbenos por WhatsApp">
+        <div class="wa-ring"></div>
+        <span class="iconify text-white text-3xl relative z-10" data-icon="mdi:whatsapp" id="waBtnIcon"></span>
+        <div class="wa-notif" id="waNotif">1</div>
+    </div>
+    <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="fixed bottom-24 right-5 z-50 w-11 h-11 rounded-xl bg-[#1877F2] flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300" title="Facebook"><span class="iconify text-white text-lg" data-icon="mdi:facebook"></span></a>
+
+    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-xl bg-neutral-900 border border-white/10 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:border-rupestre-red/30 hover:bg-neutral-800" title="Volver arriba"><span class="iconify text-neutral-400 text-lg" data-icon="mdi:chevron-up"></span></button>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast" class="toast">
+        <div class="flex items-center gap-3">
+            <span class="iconify text-rupestre-red text-xl" data-icon="mdi:check-circle"></span>
+            <div><p class="font-semibold text-sm" id="toastTitle">¡Solicitud Enviada!</p><p class="text-xs text-neutral-400 mt-0.5" id="toastMsg">Te contactaremos pronto.</p></div>
+        </div>
+    </div>
+
+    <!-- ===== JS ===== -->
+    <script>
+        /* === Número de WhatsApp (cambia aquí si es necesario) === */
+        const WA_NUMBER = '526643983448';
+        const WA_MESSAGE = 'Hola Rupestre, vengo de su página web y quiero solicitar una cotización de tracto-autopartes.';
+
+        /* === Navbar scroll === */
+        const navbar = document.getElementById('navbar'), scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-blur', 'bg-black/80', 'border-b', 'border-white/5');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('nav-blur', 'bg-black/80', 'border-b', 'border-white/5');
+                navbar.classList.add('bg-transparent');
+            }
+            if (window.scrollY > 600) {
+                scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        /* === Mobile menu === */
+        const menuBtn = document.getElementById('menuBtn'), menuIcon = document.getElementById('menuIcon'), mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                menuIcon.setAttribute('data-icon', 'mdi:close');
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                menuIcon.setAttribute('data-icon', 'mdi:menu');
+            }
+        });
+        document.querySelectorAll('.mobile-link').forEach(l => {
+            l.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                menuIcon.setAttribute('data-icon', 'mdi:menu');
+            });
+        });
+
+        /* === Hero spotlight === */
+        document.getElementById('inicio').addEventListener('mousemove', e => {
+            const r = e.currentTarget.getBoundingClientRect();
+            document.documentElement.style.setProperty('--x', (e.clientX - r.left) + 'px');
+            document.documentElement.style.setProperty('--y', (e.clientY - r.top) + 'px');
+        });
+
+        /* === Radio buttons === */
+        function selectRadio(label, value) {
+            document.querySelectorAll('.radio-dot').forEach(d => {
+                d.classList.remove('active');
+                d.querySelector('.inner').style.transform = 'scale(0)';
+            });
+            label.querySelector('.radio-dot').classList.add('active');
+            label.querySelector('.radio-dot .inner').style.transform = 'scale(1)';
+            document.getElementById('contactoHidden').value = value;
+        }
+
+        /* === Toast === */
+        function showToast(t, m) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').textContent = t;
+            document.getElementById('toastMsg').textContent = m;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 5000);
+        }
+
+        /* === Formulario — envía cotización por WhatsApp === */
+        const form = document.getElementById('cotizacionForm'),
+              submitBtn = document.getElementById('submitBtn'),
+              submitText = document.getElementById('submitText'),
+              privacyCheck = document.getElementById('privacyCheck'),
+              privacyCheckbox = document.getElementById('privacyCheckbox');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const n = form.nombre.value.trim(),
+                  t = form.telefono.value.trim(),
+                  em = form.email ? form.email.value.trim() : '',
+                  ciu = form.ciudad ? form.ciudad.value.trim() : '',
+                  v = form.tipo_vehiculo.value,
+                  mar = form.marca ? form.marca.value.trim() : '',
+                  d = form.descripcion.value.trim(),
+                  c = document.getElementById('contactoHidden').value;
+
+            if (!n || !t || !d || !v) {
+                showToast('Campos Faltantes', 'Por favor completa todos los campos obligatorios.');
+                return;
+            }
+            if (!privacyCheckbox.checked) {
+                privacyCheck.classList.add('error');
+                setTimeout(() => privacyCheck.classList.remove('error'), 600);
+                showToast('Aviso de Privacidad', 'Debes aceptar el Aviso de Privacidad.');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitText.textContent = 'Preparando...';
+
+            /* Construir mensaje para WhatsApp */
+            let waMsg = '📋 *SOLICITUD DE COTIZACIÓN*\n';
+            waMsg += '━━━━━━━━━━━━━━━━━━\n';
+            waMsg += '👤 *Nombre:* ' + n + '\n';
+            waMsg += '📱 *Teléfono:* ' + t + '\n';
+            if (em) waMsg += '📧 *Email:* ' + em + '\n';
+            if (ciu) waMsg += '📍 *Ciudad:* ' + ciu + '\n';
+            waMsg += '🚛 *Tipo de Vehículo:* ' + v + '\n';
+            if (mar) waMsg += '🏷️ *Marca/Modelo:* ' + mar + '\n';
+            waMsg += '━━━━━━━━━━━━━━━━━━\n';
+            waMsg += '🔧 *Piezas solicitadas:*\n' + d + '\n';
+            waMsg += '━━━━━━━━━━━━━━━━━━\n';
+            waMsg += '📬 *Prefiere contacto por:* ' + c + '\n';
+            waMsg += '✅ *Aviso de Privacidad:* Aceptado\n';
+            waMsg += '\n_Enviado desde rupestre.com_';
+
+            setTimeout(() => {
+                /* Abrir WhatsApp con el mensaje formateado */
+                const waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(waMsg);
+                window.open(waUrl, '_blank');
+
+                showToast('¡Abriendo WhatsApp!', 'Tu cotización se envió correctamente.');
+                form.reset();
+                privacyCheckbox.checked = false;
+                document.querySelectorAll('.radio-dot').forEach((dot, i) => {
+                    if (i === 0) { dot.classList.add('active'); dot.querySelector('.inner').style.transform = 'scale(1)'; }
+                    else { dot.classList.remove('active'); dot.querySelector('.inner').style.transform = 'scale(0)'; }
+                });
+                document.getElementById('contactoHidden').value = 'whatsapp';
+                submitBtn.disabled = false;
+                submitText.textContent = 'Enviar Solicitud de Cotización';
+            }, 800);
+        });
+
+        /* === Scroll animations === */
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.card-hover, #cotizacionForm').forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) ' + ((i % 6) * 100) + 'ms';
+            obs.observe(el);
+        });
+
+        /* === Privacy modal === */
+        const privacyModal = document.getElementById('privacyModal');
+        function openPrivacyModal(e) {
+            if (e) e.preventDefault();
+            privacyModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePrivacyModal(e) {
+            if (e && e.target !== privacyModal && !e.target.closest('button[onclick*="closePrivacyModal"]')) return;
+            privacyModal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { privacyModal.classList.remove('open'); document.body.style.overflow = ''; } });
+
+        /* === WhatsApp widget === */
+        const waChat = document.getElementById('waChat'),
+              waBtn = document.getElementById('waBtn'),
+              waBtnIcon = document.getElementById('waBtnIcon'),
+              waNotif = document.getElementById('waNotif'),
+              waTyping = document.getElementById('waTyping'),
+              waMessage = document.getElementById('waMessage');
+        let waOpen = false, firstOpen = true;
+
+        function toggleWhatsApp() { if (!waOpen) openWaChat(); else closeWaChat(); }
+        function openWaChat() {
+            waOpen = true;
+            waChat.classList.remove('closing');
+            waChat.classList.add('open');
+            waBtn.classList.add('chat-open');
+            waBtnIcon.setAttribute('data-icon', 'mdi:close');
+            waNotif.classList.remove('show');
+            if (firstOpen) {
+                firstOpen = false;
+                waTyping.classList.remove('hidden');
+                waMessage.classList.add('hidden');
+                setTimeout(() => {
+                    waTyping.classList.add('hidden');
+                    waMessage.classList.remove('hidden');
+                }, 1800);
+            }
+        }
+        function closeWaChat() {
+            waOpen = false;
+            waChat.classList.remove('open');
+            waChat.classList.add('closing');
+            waBtn.classList.remove('chat-open');
+            waBtnIcon.setAttribute('data-icon', 'mdi:whatsapp');
+            setTimeout(() => waChat.classList.remove('closing'), 250);
+        }
+        function openWhatsApp() { window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(WA_MESSAGE), '_blank'); }
+        setTimeout(() => { if (!waOpen) waNotif.classList.add('show'); }, 5000);
+    </script>
+</body>
+</html>
