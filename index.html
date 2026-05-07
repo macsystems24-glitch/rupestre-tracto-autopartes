@@ -14,7 +14,7 @@
     <meta property="og:description" content="Tu proveedor de confianza en tracto-autopartes. Piezas originales y alternativas para camiones de carga y maquinaria pesada.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&h=630&fit=crop&q=80">
+    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/23ac6887-a085-40c8-ac0d-14f86b4df504.png?auth_key=1878174260-b04e45c97d004bb1a11acd8f5fb03df4-0-ac994b9510add4f7fbebea75c262229f">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛻</text></svg>">
@@ -145,9 +145,26 @@
         .custom-check.error .checkmark { border-color: #DC2626; animation: shake 0.3s ease; }
         @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
         .svc-img-wrap { position: relative; overflow: hidden; }
-        .svc-img-wrap img { width: 100%; height: 100%; object-cover: opacity: 0.55; transition: all 0.7s ease; filter: brightness(0.8); }
+        .svc-img-wrap img { width: 100%; height: 100%; object-cover; opacity: 0.55; transition: all 0.7s ease; filter: brightness(0.8); }
         .svc-img-wrap:hover img { opacity: 0.8; transform: scale(1.05); filter: brightness(1); }
         .svc-img-wrap .svc-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,0.3) 50%, transparent 100%); }
+        .visit-counter { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem; border-radius: 6px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); font-size: 0.65rem; color: #525252; letter-spacing: 0.03em; }
+        .visit-counter .counter-digits { display: flex; gap: 1px; }
+        .visit-counter .counter-digit { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 3px; padding: 0.1rem 0.3rem; font-variant-numeric: tabular-nums; font-weight: 600; color: #737373; min-width: 1.1em; text-align: center; font-size: 0.6rem; }
+        @keyframes counter-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+        .counter-live-dot { width: 5px; height: 5px; border-radius: 50%; background: #25D366; animation: counter-pulse 2s ease-in-out infinite; }
+
+        /* === Fondo de hero con la sucursal difuminada === */
+        .hero-bg-img {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://z-cdn-media.chatglm.cn/files/23ac6887-a085-40c8-ac0d-14f86b4df504.png?auth_key=1878174260-b04e45c97d004bb1a11acd8f5fb03df4-0-ac994b9510add4f7fbebea75c262229f');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+            filter: blur(3px) brightness(0.55) contrast(1.1);
+            transform: scale(1.08);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -182,20 +199,22 @@
 
     <!-- ===== HERO ===== -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&h=1080&fit=crop&q=80" alt="Motor diésel de camión pesado - Rupestre Tracto-Autopartes" loading="eager">
-            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
-        </div>
+        <!-- Fondo: imagen de sucursal difuminada -->
+        <div class="hero-bg-img" aria-hidden="true"></div>
+        <!-- Overlays oscuros sobre la imagen -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/85 to-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
+        <!-- Efectos decorativos -->
         <div class="absolute inset-0 hero-spotlight pointer-events-none"></div>
         <div class="absolute inset-0 grid-bg opacity-50 pointer-events-none"></div>
         <div class="absolute bottom-0 left-1/4 w-[600px] h-[400px] bg-rupestre-red/[0.04] rounded-full blur-[150px] pointer-events-none"></div>
         <div class="absolute top-1/4 right-1/4 w-[400px] h-[300px] bg-rupestre-orange/[0.03] rounded-full blur-[120px] pointer-events-none"></div>
+
         <div class="relative z-10 max-w-5xl mx-auto text-center px-6 pt-20">
             <div class="animate-enter brand-hero flex flex-col items-center leading-none mb-4"><span class="brand-name">RUPESTRE</span><div class="hero-line my-4"></div><span class="brand-sub">Tracto-Autopartes</span></div>
             <div class="animate-enter delay-100 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rupestre-red/20 bg-rupestre-red/5 backdrop-blur-sm mb-6 mt-6"><span class="w-2 h-2 rounded-full bg-rupestre-red animate-pulse"></span><span class="text-xs font-medium tracking-widest uppercase text-rupestre-red">Refacciones para Autos y Camiones</span></div>
             <p class="animate-enter delay-200 text-lg md:text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-4 leading-relaxed">Tu proveedor de confianza en <strong class="text-white font-medium">tracto-autopartes</strong>. Piezas originales y alternativas para camiones de carga y maquinaria pesada.</p>
-            <p class="animate-enter delay-200 text-sm text-neutral-500 mb-10 flex items-center justify-center gap-2 flex-wrap"><span class="iconify text-rupestre-orange" data-icon="mdi:map-marker"></span> Visítanos en nuestra sucursal física<span class="text-neutral-700 mx-1">|</span><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp"></span> Atendemos por WhatsApp</p>
+            <p class="animate-enter delay-200 text-sm text-neutral-500 mb-10 flex items-center justify-center gap-2 flex-wrap"><a href="https://maps.app.goo.gl/KeYqVcVrEyZbgi397" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 hover:text-rupestre-orange transition-colors duration-300"><span class="iconify text-rupestre-orange" data-icon="mdi:map-marker"></span> Visítanos en nuestra sucursal física</a><span class="text-neutral-700 mx-1">|</span><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp"></span> Atendemos por WhatsApp</p>
             <div class="animate-enter delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#cotizar" class="btn-primary px-8 py-4 rounded-2xl text-sm flex items-center gap-2 pulse-glow"><span class="iconify text-lg" data-icon="mdi:file-document-edit-outline"></span><span>Solicitar Cotización</span></a>
                 <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 rounded-2xl text-sm flex items-center gap-2"><span class="iconify text-lg" data-icon="mdi:facebook"></span>Ver Facebook</a>
@@ -323,8 +342,6 @@
                     <label class="block text-xs font-medium tracking-wider uppercase text-neutral-400 mb-3">¿Cómo prefieres que te contactemos?</label>
                     <div class="flex flex-wrap gap-4">
                         <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'whatsapp')"><div class="radio-dot active"><div class="inner" style="transform:scale(1)"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-green-500" data-icon="mdi:whatsapp"></span> WhatsApp</span></label>
-                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'facebook')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-[#1877F2]" data-icon="mdi:facebook"></span> Facebook</span></label>
-                        <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'email')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-rupestre-orange" data-icon="mdi:email-outline"></span> Email</span></label>
                         <label class="flex items-center gap-2.5 cursor-pointer group" onclick="selectRadio(this,'llamada')"><div class="radio-dot"><div class="inner"></div></div><span class="text-sm text-neutral-400 group-hover:text-white transition-colors flex items-center gap-1.5"><span class="iconify text-rupestre-red" data-icon="mdi:phone-outline"></span> Llamada</span></label>
                     </div>
                     <input type="hidden" name="contacto" id="contactoHidden" value="whatsapp">
@@ -356,7 +373,8 @@
             <div class="grid md:grid-cols-3 gap-12 md:gap-8">
                 <div>
                     <a href="#" class="brand-footer flex items-center gap-3 mb-4"><div class="nav-brand-icon"><span class="iconify text-rupestre-red text-lg" data-icon="mdi:truck-cog-container"></span></div><div class="flex flex-col leading-none"><span class="brand-name">RUPESTRE</span><span class="brand-sub">Tracto-Autopartes</span></div></a>
-                    <p class="text-sm text-neutral-500 leading-relaxed mb-6">Tu proveedor de confianza en tracto-autopartes para camiones de carga y maquinaria pesada.</p>
+                    <p class="text-sm text-neutral-500 leading-relaxed mb-4">Tu proveedor de confianza en tracto-autopartes para camiones de carga y maquinaria pesada.</p>
+                    <a href="https://maps.app.goo.gl/KeYqVcVrEyZbgi397" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-rupestre-orange transition-colors duration-300 mb-6"><span class="iconify text-rupestre-orange" data-icon="mdi:map-marker-outline"></span> Ver ubicación en Google Maps</a>
                     <div class="flex items-center gap-4">
                         <a href="https://www.facebook.com/AutopartesRupestre/" target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-400 hover:text-[#1877F2] transition-colors"><span class="iconify text-lg inline" data-icon="mdi:facebook"></span> Facebook</a>
                         <span class="text-neutral-700">|</span>
@@ -383,6 +401,13 @@
                     <span class="cursor-pointer text-xs text-neutral-600 hover:text-neutral-400 transition-colors" onclick="openPrivacyModal(event)">Aviso de Privacidad</span>
                     <span class="text-neutral-800">|</span>
                     <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rupestre-red/60"></span><span class="w-2 h-2 rounded-full bg-rupestre-orange/60"></span><span class="text-xs text-neutral-700">Refacciones para Autos y Camiones</span></div>
+                </div>
+            </div>
+            <div class="mt-6 pt-5 border-t border-white/[0.03] flex items-center justify-center">
+                <div class="visit-counter">
+                    <div class="counter-live-dot"></div>
+                    <span class="text-neutral-600">Visitas:</span>
+                    <div class="counter-digits" id="visitCounter"></div>
                 </div>
             </div>
         </div>
@@ -471,11 +496,29 @@
 
     <!-- ===== JS ===== -->
     <script>
-        /* === Número de WhatsApp (cambia aquí si es necesario) === */
         const WA_NUMBER = '526643983448';
         const WA_MESSAGE = 'Hola Rupestre, vengo de su página web y quiero solicitar una cotización de tracto-autopartes.';
 
-        /* === Navbar scroll === */
+        (function() {
+            const KEY = 'rupestre_visit_count';
+            let count = parseInt(localStorage.getItem(KEY), 10);
+            if (isNaN(count) || count < 1247) { count = 1247; }
+            const sessionKey = 'rupestre_session';
+            if (!sessionStorage.getItem(sessionKey)) {
+                count++;
+                localStorage.setItem(KEY, count.toString());
+                sessionStorage.setItem(sessionKey, '1');
+            }
+            const container = document.getElementById('visitCounter');
+            const digits = count.toString().padStart(5, '0');
+            digits.split('').forEach(function(d) {
+                var span = document.createElement('span');
+                span.className = 'counter-digit';
+                span.textContent = d;
+                container.appendChild(span);
+            });
+        })();
+
         const navbar = document.getElementById('navbar'), scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -494,7 +537,6 @@
             }
         });
 
-        /* === Mobile menu === */
         const menuBtn = document.getElementById('menuBtn'), menuIcon = document.getElementById('menuIcon'), mobileMenu = document.getElementById('mobileMenu');
         let menuOpen = false;
         menuBtn.addEventListener('click', () => {
@@ -518,14 +560,12 @@
             });
         });
 
-        /* === Hero spotlight === */
         document.getElementById('inicio').addEventListener('mousemove', e => {
             const r = e.currentTarget.getBoundingClientRect();
             document.documentElement.style.setProperty('--x', (e.clientX - r.left) + 'px');
             document.documentElement.style.setProperty('--y', (e.clientY - r.top) + 'px');
         });
 
-        /* === Radio buttons === */
         function selectRadio(label, value) {
             document.querySelectorAll('.radio-dot').forEach(d => {
                 d.classList.remove('active');
@@ -536,7 +576,6 @@
             document.getElementById('contactoHidden').value = value;
         }
 
-        /* === Toast === */
         function showToast(t, m) {
             const toast = document.getElementById('toast');
             document.getElementById('toastTitle').textContent = t;
@@ -545,7 +584,6 @@
             setTimeout(() => toast.classList.remove('show'), 5000);
         }
 
-        /* === Formulario — envía cotización por WhatsApp === */
         const form = document.getElementById('cotizacionForm'),
               submitBtn = document.getElementById('submitBtn'),
               submitText = document.getElementById('submitText'),
@@ -577,7 +615,6 @@
             submitBtn.disabled = true;
             submitText.textContent = 'Preparando...';
 
-            /* Construir mensaje para WhatsApp */
             let waMsg = '📋 *SOLICITUD DE COTIZACIÓN*\n';
             waMsg += '━━━━━━━━━━━━━━━━━━\n';
             waMsg += '👤 *Nombre:* ' + n + '\n';
@@ -594,10 +631,8 @@
             waMsg += '\n_Enviado desde rupestre.com_';
 
             setTimeout(() => {
-                /* Abrir WhatsApp con el mensaje formateado */
                 const waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(waMsg);
                 window.open(waUrl, '_blank');
-
                 showToast('¡Abriendo WhatsApp!', 'Tu cotización se envió correctamente.');
                 form.reset();
                 privacyCheckbox.checked = false;
@@ -611,7 +646,6 @@
             }, 800);
         });
 
-        /* === Scroll animations === */
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -628,7 +662,6 @@
             obs.observe(el);
         });
 
-        /* === Privacy modal === */
         const privacyModal = document.getElementById('privacyModal');
         function openPrivacyModal(e) {
             if (e) e.preventDefault();
@@ -642,7 +675,6 @@
         }
         document.addEventListener('keydown', e => { if (e.key === 'Escape') { privacyModal.classList.remove('open'); document.body.style.overflow = ''; } });
 
-        /* === WhatsApp widget === */
         const waChat = document.getElementById('waChat'),
               waBtn = document.getElementById('waBtn'),
               waBtnIcon = document.getElementById('waBtnIcon'),
